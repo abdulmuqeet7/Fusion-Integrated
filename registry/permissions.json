@@ -79,11 +79,20 @@
       "nav": {
         "base_path": "/elm",
         "icon": "CalendarBlank",
-        "items": [],
+        "items": [
+          {
+            "code": "elm.overview",
+            "icon": "CalendarBlank",
+            "label": "Leave Management",
+            "required_permission": "elm.leave_application.submit",
+            "sort_order": 10,
+            "to": "/elm"
+          }
+        ],
         "label": "Employee Leave Management",
         "nav_section": "Administration",
         "sort_order": 30,
-        "status": "planned"
+        "status": "active"
       },
       "permissions": [
         {

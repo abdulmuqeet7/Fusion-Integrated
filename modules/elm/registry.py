@@ -7,10 +7,19 @@ MODULE = {
     "base_path": "/elm",
     "nav_section": "Administration",
     "sort_order": 30,
-    "status": "planned",
+    "status": "active",
 }
 
-NAV_ITEMS = []
+NAV_ITEMS = [
+    {
+        "code": "elm.overview",
+        "label": "Leave Management",
+        "icon": "CalendarBlank",
+        "to": "/elm",
+        "required_permission": "elm.leave_application.submit",
+        "sort_order": 10,
+    },
+]
 
 PERMISSIONS = [
     ("elm.leave_application.submit", "Submit a leave application"),
