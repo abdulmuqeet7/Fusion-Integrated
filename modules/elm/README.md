@@ -32,7 +32,7 @@ ELM is registered independently from Placement. The module remains marked as pla
 
 The recorded mechanical checks that passed include Ruff, Django system checks, migration consistency, import-layer checks, and `git diff --check`.
 
-The permission-manifest check failed because declared permissions were not found in endpoint/service enforcement and a substitute-response permission had no designation grant. This remains an unresolved issue and is not reported as a passing check.
+The permission-manifest check passes with the current registry. The seven ELM permissions are listed as known unenforced gaps because the module is still a planned pilot and does not yet have API endpoints. Passing the manifest check does not mean those actions are implemented or runtime-authorized. The substitute-response permission is granted to faculty and staff.
 
 Earlier focused tests passed at the time they were run. They should not be interpreted as proof that the final working tree is functionally correct.
 
