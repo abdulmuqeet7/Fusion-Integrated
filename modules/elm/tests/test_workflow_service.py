@@ -60,6 +60,7 @@ class WorkflowServiceTests(TestCase):
             (LeaveWorkflowAction.DECLINE_SUBSTITUTE, LeaveWorkflowState.APPLICANT_ACTION_REQUIRED),
         ):
             with self.subTest(action=action):
+                self.application.substitute_consents.all().delete()
                 self.set_state(LeaveWorkflowState.AWAITING_SUBSTITUTE_RESPONSE)
                 SubstituteConsent.objects.create(application=self.application, substitute_user_id=2)
                 actor = self.actor(2, "elm.substitute_consent.respond")
